@@ -1,70 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weather Dashboard</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="weather-dashboard">
-    <h1>🌦️ Weather Dashboard</h1>
-    
-    <div class="location-input">
-      <div class="search-box">
-        <input 
-          type="text" 
-          id="searchInput" 
-          placeholder="Search location (e.g. New York, London)"
-        >
-        <button id="searchBtn">🔍 Search</button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-wall1">
+    <div class="weather-dashboard">
+      <h1>🌦️ Weather Dashboard</h1>
+
+      <div class="location-input">
+        <div class="search-box">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search location (e.g. New York, London)"
+          />
+          <button id="searchBtn">🔍 Search</button>
+        </div>
+        <div class="coordinate-inputs">
+          <input
+            type="number"
+            id="latitudeInput"
+            placeholder="Latitude (e.g. 40.7128)"
+            step="any"
+          />
+          <input
+            type="number"
+            id="longitudeInput"
+            placeholder="Longitude (e.g. -74.0060)"
+            step="any"
+          />
+        </div>
+        <button id="currentLocationBtn">📍 Use My Location</button>
       </div>
-      <div class="coordinate-inputs">
-        <input 
-          type="number" 
-          id="latitudeInput" 
-          placeholder="Latitude (e.g. 40.7128)"
-          step="any"
-        >
-        <input 
-          type="number" 
-          id="longitudeInput" 
-          placeholder="Longitude (e.g. -74.0060)"
-          step="any"
-        >
+
+      <div id="error" class="error"></div>
+
+      <div id="weatherDetails" class="weather-details">
+        <h2>Current Weather</h2>
+        <div class="weather-grid">
+          <div class="weather-item" id="tempItem">
+            <p id="temperature">🌡️ Temperature: --°C</p>
+          </div>
+          <div class="weather-item">
+            <p id="windSpeed">💨 Wind Speed: -- km/h</p>
+          </div>
+          <div class="weather-item">
+            <p id="cloudCover">☁️ Cloud Coverage: --%</p>
+          </div>
+          <div class="weather-item">
+            <p id="humidity">💧 Humidity: --%</p>
+          </div>
+          <div class="weather-item">
+            <p id="pressure">🌪️ Pressure: -- hPa</p>
+          </div>
+          <div class="weather-item">
+            <p id="precipitation">🌧️ Precipitation: -- mm</p>
+          </div>
+        </div>
       </div>
-      <button id="currentLocationBtn">📍 Use My Location</button>
     </div>
 
-    <div id="error" class="error"></div>
-
-    <div id="weatherDetails" class="weather-details">
-      <h2>Current Weather</h2>
-      <div class="weather-grid">
-        <div class="weather-item" id="tempItem">
-          <p id="temperature">🌡️ Temperature: --°C</p>
-        </div>
-        <div class="weather-item">
-          <p id="windSpeed">💨 Wind Speed: -- km/h</p>
-        </div>
-        <div class="weather-item">
-          <p id="cloudCover">☁️ Cloud Coverage: --%</p>
-        </div>
-        <div class="weather-item">
-          <p id="humidity">💧 Humidity: --%</p>
-        </div>
-        <div class="weather-item">
-          <p id="pressure">🌪️ Pressure: -- hPa</p>
-        </div>
-        <div class="weather-item">
-          <p id="precipitation">🌧️ Precipitation: -- mm</p>
-        </div>
-      </div>
-    </div>
-
-   
-  </div>
-
-  <script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
